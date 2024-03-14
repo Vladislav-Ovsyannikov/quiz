@@ -1,11 +1,13 @@
 const React = require('react');
+const Layout = require('../Layout');
 
-module.exports = function MainPage({ title }) {
+module.exports = function MainPage({ title, content }) {
   return (
-    <>
-      <div><img src="" alt="Очень милая картинка" /></div>
-      <div>Приветсвуем вас на квизе от "Рабочее название команды"</div>
-      <button>Начать квиз</button>
-    </>
+    <Layout title={title}>
+      <h2>{title}</h2>
+      <div className='img'><img src="" alt="Очень милая картинка" /></div>
+      <div className='text'>{content}</div>
+      <button className='btn'>Начать квиз</button>
+    </Layout>
   );
 };
