@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Topics } = require('../../db/models');
-const PageQuizTopics = require('../../components/Page/PageQuizTopics');
+const PageQuizTopics = require('../../components/pages/PageQuizTopics');
 
 router.get('/', async (req, res) => {
   try {
