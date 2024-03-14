@@ -23,4 +23,16 @@ router.get('/:id/question', async (req, res) => {
   }
 });
 
+router.get('/:id/question/:questId', async (req, res) => {
+  try {
+    const { id, questId } = req.params;
+    const question = await Questions.findOne({
+      where: { topic_id: id, id: questId },
+    });
+    res.send(res.renderComponent(PageQuestion, { question }));
+  } catch ({ message }) {
+    res.redirect('/scores-table');
+  }
+});
+
 module.exports = router;
