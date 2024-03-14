@@ -9,7 +9,7 @@ module.exports = function Navbar({ scores }) {
       <div className="select hidden"><a href="/auth/sign-in">Войти</a></div>
       <div className="select hidden"><a href="/logout">Выйти</a></div>
       <div className="select hidden">
-        <a href="/table">
+        <a href="/scores-table">
           Очки:
           {scores}
         </a>

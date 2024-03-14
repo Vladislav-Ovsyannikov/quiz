@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     // console.log(users);
     const html = res.renderComponent(scoresPage, {
       title: 'Лучшие результаты',
-      content: { users },
+      users,
     });
     res.send(html);
   } catch (error) {
