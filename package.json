@@ -4,7 +4,10 @@
   "description": "## Общая информация  Мы собираемся создать веб-приложение для флэш-карт. Наше приложение предоставит пользователям возможность использования флэш-карты.  Пользователь выберет колоду и сыграет партию с флэш-картами.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dbr": "npx sequelize-cli db:drop && npx   sequelize-cli db:create &&  npx sequelize-cli db:migrate && npx   sequelize-cli db:seed:all "
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,9 @@
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "nodemon": "^3.1.0"
+  },
+  "nodemonConfig": {
+    "ext": "js, json, hbs, html, jsx"
   },
   "dependencies": {
     "@babel/core": "^7.24.0",
