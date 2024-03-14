@@ -14,9 +14,10 @@ module.exports = function MainPage({ title, content }) {
             <div>{el.name}</div>
             <div>{el.scores}</div>
         </div>
-      ) */}
+      ) 
         
-      )}
+      )
+      }*/}
       
     </Layout>
   );
