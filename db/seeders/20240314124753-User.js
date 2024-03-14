@@ -7,7 +7,7 @@ module.exports = {
         name: 'John Doe',
         e_mail: 'qwert',
         pass: 123,
-        scores: 1
+        scores: 3
       }], {});
   },
 
