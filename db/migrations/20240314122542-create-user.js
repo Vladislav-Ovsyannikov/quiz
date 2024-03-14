@@ -18,6 +18,9 @@ module.exports = {
       e_mail: {
         type: Sequelize.STRING
       },
+      scores: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE
