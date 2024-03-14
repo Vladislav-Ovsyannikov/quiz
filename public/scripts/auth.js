@@ -19,7 +19,7 @@ if (signInForm) {
         console.log(data);
     });
 }
-
+///////
 if (signUpForm) {
     signUpForm.addEventListener('submit', async (e) => {
         e.preventDefault();
