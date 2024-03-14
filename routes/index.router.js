@@ -2,12 +2,13 @@ const router = require('express').Router();
 
 const authRouter = require('./views/auth.routes');
 const topicViewRouter = require('./views/topic.router.views');
-// const questionViewRouter = require('./views/question.router.views');
-const mainRoute = require('../routes/views/main.route');
+const mainRoute = require('./views/main.route');
+const scoresRoute = require('./views/scores.router')
 
+router.use('/', mainRoute);
 router.use('/topics', topicViewRouter);
 router.use('/auth', authRouter);
-router.use('/main', mainRoute);
-// router.use('/questions', questionViewRouter);
+router.use('/scores-table', scoresRoute);
+
 
 module.exports = router;

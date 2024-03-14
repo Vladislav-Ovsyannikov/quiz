@@ -1,5 +1,5 @@
 const React = require('react');
-const Layout = require('./Layout');
+const Layout = require('../Layout');
 
 function SignInPage() {
   return (
@@ -7,7 +7,7 @@ function SignInPage() {
       <div className="container">
         <form id="sign-in">
           <div className="mb-3">
-            <label for="exampleInputEmail1" className="form-label">
+            <label htmlFor="exampleInputEmail1" className="form-label">
               Имя любимое моё
             </label>
             <input
@@ -19,7 +19,7 @@ function SignInPage() {
             />
           </div>
           <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label">
+            <label htmlFor="exampleInputPassword1" className="form-label">
               Парольчик
             </label>
             <input

@@ -1,5 +1,5 @@
 const React = require('react');
-const Layout = require('./Layout');
+const Layout = require('../Layout');
 
 function SignUpPage() {
   return (
@@ -8,10 +8,10 @@ function SignUpPage() {
         <h1
           style={{ color: 'rgba(255,0,0,1)', textTransform: 'uppercase' }}
           className="sign-up__error"
-        ></h1>
+        />
         <form id="sign-up">
           <div className="mb-3">
-            <label for="exampleInputEmail1" className="form-label">
+            <label htmlFor="exampleInputEmail1" className="form-label">
               Name
             </label>
             <input
@@ -23,13 +23,13 @@ function SignUpPage() {
             />
           </div>
           <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label">
+            <label htmlFor="exampleInputPassword1" className="form-label">
               Image
             </label>
             <input name="img" type="file" className="form-control" id="exampleInputPassword1" />
           </div>
           <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label">
+            <label htmlFor="exampleInputPassword1" className="form-label">
               Password
             </label>
             <input
@@ -40,7 +40,7 @@ function SignUpPage() {
             />
           </div>
           <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label">
+            <label htmlFor="exampleInputPassword1" className="form-label">
               Repeat Password
             </label>
             <input
