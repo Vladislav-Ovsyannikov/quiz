@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Topics, Questions } = require('../../db/models');
-const PageQuizTopics = require('../../components/Page/PageQuizTopics');
-const PageQuestion = require('../../components/Page/PageQuestion');
+const PageQuizTopics = require('../../components/pages/PageQuizTopics');
+const PageQuestion = require('../../components/pages/PageQuestion');
 
 router.get('/', async (req, res) => {
   try {
