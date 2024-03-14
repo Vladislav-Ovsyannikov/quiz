@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Topics.init({
-    name: DataTypes.STRING
+    title: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Topics',

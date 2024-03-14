@@ -2,21 +2,22 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
- 
-      await queryInterface.bulkInsert('Topics', [
+  async up(queryInterface, Sequelize) {
+    await queryInterface.bulkInsert(
+      'Topics',
+      [
         {
-       name: '1',
-     },
-     {
-      name: '2',
-    },
-    ], {});
-    
+          title: 'Car',
+        },
+        {
+          title: 'Footbal',
+        },
+      ],
+      {}
+    );
   },
 
-  async down (queryInterface, Sequelize) {
- 
-      await queryInterface.bulkDelete('Topics', null, {});
-  }
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete('Topics', null, {});
+  },
 };
