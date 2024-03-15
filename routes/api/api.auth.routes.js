@@ -2,17 +2,29 @@ const router = require('express').Router();
 const { User } = require('../../db/models');
 
 router.post('/sign-in', async (req, res) => {
+    let user;
    try {
     const {name, password} = req.body;
-    console.log(name, password);
+    user = await User.findOne({ where: {name} });
+    if (!user) {
+        res.json({message: "Такого челика нет"});
+        return;
+    }
+    if (user.password !== password) {
+        res.json({message: "Такого челика нет"});
+        return;
+    } else {
+        res.json({message: "success"});
+        return;
+    }
    } catch ({message}) { 
     res.json({message})
    }
 });
 
 router.post('/sign-up', async (req, res) => {
+    let user;
     try {
-        let user;
         const {name, password} = req.body;
         user = await User.findOne({ where: {name} });
         if (user) {

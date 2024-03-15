@@ -34,15 +34,15 @@ function SignUpPage() {
               id="exampleInputPassword1"
             />
           </div>
-          <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label">
-              Повторите пароль
+          <div className="mb">
+            <label for="exampleInputEmail2" className="form-label">
+              Почта
             </label>
             <input
-              name="rpassword"
-              type="password"
+              name="password"
+              type="text"
               className="form-control"
-              id="exampleInputPassword1"
+              id="exampleInputEmail2"
             />
           </div>
           <button type="submit" className="btn btn-primary">
