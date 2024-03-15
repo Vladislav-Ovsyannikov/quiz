@@ -6,7 +6,15 @@ module.exports = function Layout({ title, children, user }) {
     <html lang='en'>
       <head>
         <title>{title}</title>
-        {/* <link rel='stylesheet' href='/css/reset_style.css' /> */}
+        <link rel='stylesheet' href='/styles/reset_style.css' />
+        <link rel='stylesheet' href='/styles/Navbar.css' />
+        <link rel='stylesheet' href='/styles/Auotirization.css' />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap'
+          rel='stylesheet'
+        />
         <script defer src='/scripts/auth.js' />
         <script defer src='/scripts/question.js' />
       </head>

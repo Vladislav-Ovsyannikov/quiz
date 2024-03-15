@@ -7,6 +7,7 @@ function PageQuestion({ question, user }) {
     <Layout user={user}>
       <div className='question'>
         <p>{question.question}</p>
+        {/* <img src={question.img} alt='' /> */}
         <FormAnswer question={question} />
         <div className='messageResponse' />
         <a
