@@ -11,4 +11,10 @@ router.get('/', async (req, res) => {
   res.send(html);
 });
 
+router.get('/logout', async (req, res) => {
+  delete res.app.locals.user
+  res.redirect('/');
+});
+
 module.exports = router;
+

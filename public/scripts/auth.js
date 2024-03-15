@@ -14,6 +14,7 @@ if (signInForm) {
             body: JSON.stringify({
                 name: name.value,
                 password: password.value,
+                scores: 0
             }),
         });
         const data = await res.json();
@@ -24,7 +25,7 @@ if (signInForm) {
         }
     });
 }
-///////
+/// ////
 if (signUpForm) {
     signUpForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -38,6 +39,7 @@ if (signUpForm) {
             body: JSON.stringify({
                 name: name.value,
                 password: password.value,
+                
             }),
         });
         const data = await res.json();
