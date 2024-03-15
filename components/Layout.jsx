@@ -7,7 +7,8 @@ module.exports = function Layout({ title, children, scores = 0 }) {
       <head>
         <title>{title}</title>
         <link rel='stylesheet' href='/css/reset_style.css' />
-        <script defer src="/scripts/auth.js" />
+        <script defer src='/scripts/auth.js' />
+        <script defer src='/scripts/question.js' />
       </head>
       <body>
         <NavBar scores={scores} />
