@@ -13,16 +13,18 @@ module.exports = function Navbar({ user }) {
               <div className='navbar-user'>
                 <div className='userName'>Привет, {user.name}!</div>
                 <a href='/scores-table'>Результаты</a>
-              </div>
-              <div className='select hidden'>
                 <a href='/logout'>Выйти</a>
-              </div>
-              <div className='select hidden'>
                 <a href='/scores-table'>
                   Очки:
                   {user.scores}
                 </a>
               </div>
+              {/* <div className='select hidden'> */}
+
+              {/* </div> */}
+              {/* <div className='select hidden'> */}
+
+              {/* </div> */}
             </>
           ) : (
             <div className='navbar-reg'>

@@ -5,7 +5,8 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     const questionsData = [
       {
-        question: 'Продолжите фразу из мем-звонка: «С какой стати, вы меня извините?! Я скандал такой …»',
+        question:
+          'Продолжите фразу из мем-звонка: «С какой стати, вы меня извините?! Я скандал такой …»',
         topic_id: 1,
         answer: 'учиню',
         img: 'https://avatars.mds.yandex.net/i?id=0a412bd9aa94acc1b1552d8c0be2097cd5cf6f01-10869732-images-thumbs&n=13',
@@ -29,13 +30,15 @@ module.exports = {
         img: 'https://165dc6ae-1b27-4856-8ca7-b1edf208847c.selcdn.net/images/original/materials/frontPhotos/18062/3316.jpg?1704985687',
       },
       {
-        question: 'Человека с каким редким именем встречала женщина с красным кандибобером?',
+        question:
+          'Человека с каким редким именем встречала женщина с красным кандибобером?',
         topic_id: 1,
         answer: 'ибрагим',
         img: 'https://news.store.rambler.ru/img/a2edff0f8534a3d5b671d43c41ca8e29?img-1-resize=width%3A1280%2Cheight%3A1280%2Cfit%3Acover&img-format=auto',
       },
       {
-        question: 'Автор видео держал в руках камеру. А что показалось женщине, которая проходила мимо?',
+        question:
+          'Автор видео держал в руках камеру. А что показалось женщине, которая проходила мимо?',
         topic_id: 1,
         answer: 'сова',
         img: 'https://n1s1.hsmedia.ru/d1/7c/7d/d17c7d1eb16aa910e855754a35f9db36/1200x630_0xac120003_1134419881666367896.jpg',
@@ -56,7 +59,7 @@ module.exports = {
         question: 'Что носит дьявол в известном фильме?',
         topic_id: 2,
         answer: 'прада',
-        img: 'https://b1.filmpro.ru/c/485214.1200xp.jpg',
+        img: 'https://n1s2.hsmedia.ru/6e/6e/b6/6e6eb61bd08eb53c2ab539fe2461a33a/600x600_1_3ed83a520930876c3eb4acb3a9ef1c33@1600x1600_0xac120003_10856360701636843717.png',
       },
       {
         question: 'Мои года - моё ...',
@@ -83,7 +86,7 @@ module.exports = {
         img: 'https://tvtower.ru/upload/about.jpg',
       },
     ];
-    
+
     const questions = questionsData.map((question) => ({
       ...question,
       createdAt: new Date(),
@@ -91,9 +94,8 @@ module.exports = {
     }));
     await queryInterface.bulkInsert('Questions', questions);
   },
-  
+
   async down(queryInterface, Sequelize) {
     await queryInterface.bulkDelete('Questions', null, {});
   },
 };
-

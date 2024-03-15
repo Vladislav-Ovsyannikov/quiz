@@ -1,12 +1,17 @@
+
 .container {
   display: flex;
   justify-content: center;
 }
+
+.sign-up,
 .sign-in {
   display: flex;
   flex-direction: column;
 }
 
+
+.sign-up input,
 .sign-in input {
   border-radius: 25px;
   border: 5px solid rgb(156, 4, 226);
