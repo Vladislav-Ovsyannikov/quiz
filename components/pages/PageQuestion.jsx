@@ -2,9 +2,9 @@ const React = require('react');
 const Layout = require('../Layout');
 const FormAnswer = require('../ui/FormAnswer');
 
-function PageQuestion({ question }) {
+function PageQuestion({ question, user }) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div className='question'>
         <p>{question.question}</p>
         <FormAnswer question={question} />

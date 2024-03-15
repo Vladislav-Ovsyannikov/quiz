@@ -5,12 +5,7 @@ function SignUpPage() {
   return (
     <Layout>
       <div className="container">
-        <h1
-          style={{ color: 'rgba(255,0,0,1)', textTransform: 'uppercase' }}
-          className="sign-up__error"
-        />
-        <form id="sign-up">
-          <div className="mb-3">
+        <form className="sign-up">
             <label htmlFor="exampleInputEmail1" className="form-label">
               Name
             </label>
@@ -21,10 +16,7 @@ function SignUpPage() {
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
             />
-          </div>
-
-          <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label">
+            <label htmlFor="exampleInputPassword1" className="form-label">
               Пароль
             </label>
             <input
@@ -33,18 +25,15 @@ function SignUpPage() {
               className="form-control"
               id="exampleInputPassword1"
             />
-          </div>
-          <div className="mb">
-            <label for="exampleInputEmail2" className="form-label">
+            <label htmlFor="exampleInputEmail2" className="form-label">
               Почта
             </label>
             <input
-              name="password"
+              name="email"
               type="text"
               className="form-control"
               id="exampleInputEmail2"
             />
-          </div>
           <button type="submit" className="btn btn-primary">
             Зарегистрироваться
           </button>

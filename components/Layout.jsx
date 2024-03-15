@@ -1,7 +1,8 @@
 const React = require('react');
 const NavBar = require('./ui/NavBar');
 
-module.exports = function Layout({ title, children, scores = 0 }) {
+module.exports = function Layout({ title, children, user }) {
+  console.log(user);
   return (
     <html lang='en'>
       <head>
@@ -11,7 +12,7 @@ module.exports = function Layout({ title, children, scores = 0 }) {
         <script defer src='/scripts/question.js' />
       </head>
       <body>
-        <NavBar scores={scores} />
+        <NavBar user={user} />
         {children}
       </body>
     </html>

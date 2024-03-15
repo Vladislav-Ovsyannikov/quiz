@@ -1,6 +1,6 @@
 const React = require('react');
 
-module.exports = function Navbar({ scores, user }) {
+module.exports = function Navbar({ user }) {
   return (
     <div className='navbar'>
       <div className='select'>
@@ -26,7 +26,7 @@ module.exports = function Navbar({ scores, user }) {
           <div className='select hidden'>
             <a href='/scores-table'>
               Очки:
-              {scores}
+              {user.scores}
             </a>
           </div>
         </>

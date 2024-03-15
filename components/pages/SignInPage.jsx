@@ -5,8 +5,7 @@ function SignInPage() {
   return (
     <Layout>
       <div className="container">
-        <form id="sign-in">
-          <div className="mb-3">
+        <form className="sign-in">
             <label htmlFor="exampleInputEmail1" className="form-label">
               Имя любимое моё
             </label>
@@ -17,8 +16,6 @@ function SignInPage() {
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
             />
-          </div>
-          <div className="mb-3">
             <label htmlFor="exampleInputPassword1" className="form-label">
               Парольчик
             </label>
@@ -28,7 +25,6 @@ function SignInPage() {
               className="form-control"
               id="exampleInputPassword1"
             />
-          </div>
           <button type="submit" className="btn btn-primary">
             Авторизироваться
           </button>

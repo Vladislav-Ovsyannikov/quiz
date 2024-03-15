@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('../Layout');
 
-module.exports = function ScoresPage({ title, users }) {
+module.exports = function ScoresPage({ title, users, user }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} user={user}>
       <h2>{title}</h2>
       {users.toSorted((a,b) => b.scores - a.scores).map((el, index) => (
         <div className='flex' style={{display: 'flex', justifyContent: 'center'}}>

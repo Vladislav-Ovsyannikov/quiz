@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('../Layout');
 
-function PageQuizTopic({ quizzes }) {
+function PageQuizTopic({ quizzes, user }) {
   return (
-    <Layout>
+    <Layout user={user}>
       <div className='container__topics'>
         {quizzes.map((quiz) => (
           <div>

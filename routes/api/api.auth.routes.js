@@ -11,11 +11,12 @@ router.post('/sign-in', async (req, res) => {
         return;
     }
     if (user.password !== password) {
-        res.json({message: "Такого челика нет"});
-        return;
+        res.json({message: "Пароль не совпадает"});
+        
     } else {
         res.json({message: "success"});
-        return;
+        res.app.locals.user = user;
+        res.app.locals.scores = scores;
     }
    } catch ({message}) { 
     res.json({message})
