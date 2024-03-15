@@ -1,6 +1,6 @@
 const React = require('react');
 
-function FormAnswer({question}) {
+function FormAnswer({ question }) {
   return (
     <form
       className='formAnswer'
@@ -8,7 +8,7 @@ function FormAnswer({question}) {
       data-questionid={question.id}
       method='post'
     >
-      <input type='text' name='answers' placeholder='answer' required />
+      <input type='text' name='answer' placeholder='answer' required />
       <button className='OKbut' type='submit'>
         Ответить
       </button>
