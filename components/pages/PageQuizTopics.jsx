@@ -6,7 +6,7 @@ function PageQuizTopic({ quizzes, user }) {
     <Layout user={user}>
       <div className='container__topics'>
         {quizzes.map((quiz) => (
-          <div>
+          <div className='themes'>
             <a href={`/topics/${quiz.id}/question`}>{quiz.title}</a>
           </div>
         ))}

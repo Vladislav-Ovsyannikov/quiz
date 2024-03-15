@@ -7,9 +7,9 @@ module.exports = function ScoresPage({ title, users, user }) {
       <h2>{title}</h2>
       {users.toSorted((a,b) => b.scores - a.scores).map((el, index) => (
         <div className='flex' style={{display: 'flex', justifyContent: 'center'}}>
-          <div style={{margin: 2}}>{index + 1}</div>
-          <div>{el.name}</div>
-          <div>{el.scores}</div>
+          <div className='nameScore' style={{margin: 2}}>{index + 1}</div>
+          <div className='nameScore'>{el.name}</div>
+          <div className='scoreScore'>{el.scores}</div>
         </div>
       ))}
     </Layout>

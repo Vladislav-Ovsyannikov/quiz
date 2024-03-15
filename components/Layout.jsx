@@ -9,6 +9,7 @@ module.exports = function Layout({ title, children, user }) {
         <link rel='stylesheet' href='/styles/reset_style.css' />
         <link rel='stylesheet' href='/styles/Navbar.css' />
         <link rel='stylesheet' href='/styles/Auotirization.css' />
+        <link rel='stylesheet' href='/styles/MainPage.css' />
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
         <link
