@@ -31,7 +31,7 @@ router.get('/:id/question/:questId', async (req, res) => {
     });
     res.send(res.renderComponent(PageQuestion, { question }));
   } catch ({ message }) {
-    res.redirect('/scores-table');
+    res.redirect('/finalQuize');
   }
 });
 
