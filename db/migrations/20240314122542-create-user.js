@@ -12,13 +12,14 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      pass: {
-        type: Sequelize.INTEGER
+      password: {
+        type: Sequelize.STRING
       },
       e_mail: {
         type: Sequelize.STRING
       },
       scores: {
+        allowNull: true,
         type: Sequelize.INTEGER
       },
       createdAt: {
