@@ -16,7 +16,11 @@ if (signInForm) {
             }),
         });
         const data = await res.json();
-        console.log(data);
+        if (data.message === 'success') {
+            window.location.assign('/')
+        } else {
+            alert (data.message);
+        }
     });
 }
 ///////
@@ -24,6 +28,7 @@ if (signUpForm) {
     signUpForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const {name, password} = e.target;
+        console.log(password);
         const res = await fetch('/api/auth/sign-up', {
             method:'post',
             headers: {
