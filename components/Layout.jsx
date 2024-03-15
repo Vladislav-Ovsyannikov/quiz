@@ -2,7 +2,6 @@ const React = require('react');
 const NavBar = require('./ui/NavBar');
 
 module.exports = function Layout({ title, children, user }) {
-  console.log(user);
   return (
     <html lang='en'>
       <head>

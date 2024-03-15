@@ -16,7 +16,7 @@ router.post('/sign-in', async (req, res) => {
     } else {
         res.json({message: "success"});
         res.app.locals.user = user;
-        res.app.locals.scores = scores;
+        res.app.locals.scores = user.scores;
     }
    } catch ({message}) { 
     res.json({message})
@@ -32,7 +32,7 @@ router.post('/sign-up', async (req, res) => {
             res.json({ message: 'Такой челик уже есть!!!'});
             return;
         }
-        user = await User.create({name, password});
+        user = await User.create({name, password, scores:0});
         res.json({ message: 'success'})
        } catch ({message}) { 
         res.json({message})

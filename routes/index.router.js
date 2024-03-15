@@ -4,10 +4,11 @@ const router = require('express').Router();
 const authRouter = require('./views/auth.routes');
 const topicViewRouter = require('./views/topic.router.views');
 const apiAuthRouter = require('./api/api.auth.routes');
-
 const mainRoute = require('./views/main.route');
 const scoresRoute = require('./views/scores.router');
 const errorRoute = require('./views/error.routes');
+const finalViewRouter = require('./views/finalPage.router');
+
 
 //api
 const questionRouter = require('./api/question.api.router');
@@ -17,6 +18,7 @@ router.use('/', mainRoute);
 router.use('/topics', topicViewRouter);
 router.use('/auth', authRouter);
 router.use('/scores-table', scoresRoute);
+router.use('/finalQuize', finalViewRouter);
 router.use('/*', errorRoute);
 
 
