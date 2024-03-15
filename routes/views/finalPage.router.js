@@ -4,9 +4,9 @@ const { User } = require('../../db/models');
 
 router.get('/', async (req, res) => {
   try {
-    const { user } = res.app.locals;
-    const userA = await User.findOne({ where: { id: user.id } });
-    res.send(res.renderComponent(FinalQuizPage, { title: 'Результат', userA }));
+    const {user, scores} = res.app.locals
+    const userInDb = await User.findOne({where:{id: user.id}})
+    res.send(res.renderComponent(FinalQuizPage, { title: 'Результат', user: userInDb, scores }));
   } catch ({ message }) {
     res.status(500).json({ error: message });
   }

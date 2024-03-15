@@ -4,7 +4,7 @@ const { User } = require('../../db/models');
 router.post('/sign-in', async (req, res) => {
     let user;
    try {
-    const {name, password, scores} = req.body;
+    const {name, password} = req.body;
     user = await User.findOne({ where: {name} });
     if (!user) {
         res.json({message: "Такого челика нет"});
@@ -16,7 +16,7 @@ router.post('/sign-in', async (req, res) => {
     } else {
         res.json({message: "success"});
         res.app.locals.user = user;
-        res.app.locals.scores = scores;
+        res.app.locals.scores = user.scores;
     }
    } catch ({message}) { 
     res.json({message})

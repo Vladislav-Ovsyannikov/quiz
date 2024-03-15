@@ -6,19 +6,14 @@ router.post('/', async (req, res) => {
     const { answer, questionid } = req.body;
     const answeDb = await Questions.findOne({ where: { id: questionid } });
     if (answer === answeDb.answer) {
-      res.status(200).json({ message: 'success' });
-      res.app.locals.scores += 10;
-      const scores = await User.update({scores: res.app.locals.scores}, {
+      res.app.locals.user.scores += 10;
+      await User.update({scores: res.app.locals.user.scores}, {
         where: {id: res.app.locals.user.id}
       })
-      // console.log(res.app.locals.scores, 'res.app.locals.score');
-      // console.log(res.app.locals.user.id, 'res.app.locals.user.id');
-      // console.log(scores, 'scores - await');
-    } else {
-      res.status(200).json({ message: 'bad' });
-      res.app.locals.scores += 0;
-    }
-    console.log(res.app.locals.scores);
+      return res.status(200).json({ message: 'success' });
+    } 
+      return res.status(200).json({ message: 'bad' });
+    
   } catch ({ message }) {
     res.status(500).json({ error: message });
   }
