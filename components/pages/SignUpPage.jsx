@@ -22,15 +22,10 @@ function SignUpPage() {
               aria-describedby="emailHelp"
             />
           </div>
+
           <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">
-              Image
-            </label>
-            <input name="img" type="file" className="form-control" id="exampleInputPassword1" />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">
-              Password
+            <label for="exampleInputPassword1" className="form-label">
+              Пароль
             </label>
             <input
               name="password"
@@ -40,8 +35,8 @@ function SignUpPage() {
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="exampleInputPassword1" className="form-label">
-              Repeat Password
+            <label for="exampleInputPassword1" className="form-label">
+              Повторите пароль
             </label>
             <input
               name="rpassword"
