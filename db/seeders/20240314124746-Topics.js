@@ -7,10 +7,10 @@ module.exports = {
       'Topics',
       [
         {
-          title: 'Car',
+          title: 'Memes',
         },
         {
-          title: 'Footbal',
+          title: 'Solyanka',
         },
       ],
       {}

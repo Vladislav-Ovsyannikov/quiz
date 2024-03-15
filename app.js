@@ -15,6 +15,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(ssr);
 app.use('/', indexRouter);
 
+
+
 app.listen(PORT, () => {
   console.log('Сервер работает, порт', PORT);
 });
