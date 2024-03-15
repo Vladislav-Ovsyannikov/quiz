@@ -24,6 +24,9 @@ module.exports = {
       answer: {
         type: Sequelize.STRING
       },
+      img: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE

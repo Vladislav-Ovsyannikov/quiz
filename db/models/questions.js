@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       question: DataTypes.STRING,
       topic_id: DataTypes.INTEGER,
       answer: DataTypes.STRING,
+      img: DataTypes.STRING,
     },
     {
       sequelize,
